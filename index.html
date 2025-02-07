@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Couples Survey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="surveyPage">
+        <h1>Couples Survey</h1>
+        <form id="surveyForm">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" required><br><br>
+
+            <label for="favoriteSport">Is football your favorite sport?</label><br>
+            <input type="radio" name="favoriteSport" value="yes" required> Yes
+            <input type="radio" name="favoriteSport" value="maybe" required> Maybe
+            <input type="radio" name="favoriteSport" value="no" required> No<br><br>
+
+            <label for="partnerCode">Enter partner's code (if you have one):</label>
+            <input type="text" id="partnerCode"><br><br>
+
+            <button type="submit">Submit Survey</button>
+        </form>
+
+        <div id="thankYouMessage" style="display: none;">
+            <h2>Thank you for completing the survey!</h2>
+            <p>Your unique code: <span id="generatedCodeMessage"></span></p>
+            <button id="seeResultsButton" style="display: none;">See Results</button>
+        </div>
+    </div>
+
+    <div id="resultsPage" style="display: none;">
+        <h2>Survey Results</h2>
+        <div id="responses"></div>
+        <button id="refreshButton">Refresh</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
